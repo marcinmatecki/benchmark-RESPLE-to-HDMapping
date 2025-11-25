@@ -3,4 +3,4 @@
 	url = https://github.com/LASzip/LASzip.git
 [submodule "src/RESPLE"]
 	path = src/RESPLE
-	url = https://github.com/ASIG-X/RESPLE
+	url = https://github.com/MapsHD/RESPLE
