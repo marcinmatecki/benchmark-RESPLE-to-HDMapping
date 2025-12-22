@@ -245,7 +245,7 @@ int main(int argc, char **argv)
 
             trajectory.push_back(pose);
         
-            RCLCPP_INFO(rclcpp::get_logger("GenzOdometry"), "Added position to trajectory: x=%.3f, y=%.3f, z=%.3f", x, y, z);
+            RCLCPP_INFO(rclcpp::get_logger("RESPLEOdometry"), "Added position to trajectory: x=%.3f, y=%.3f, z=%.3f", x, y, z);
         }
     }
 
