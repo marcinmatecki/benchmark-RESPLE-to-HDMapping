@@ -2,7 +2,7 @@
 
 ## Step 1 (prepare data)
 Download the dataset `reg-1.bag` by clicking [link](https://cloud.cylab.be/public.php/dav/files/7PgyjbM2CBcakN5/reg-1.bag) (it is part of [Bunker DVI Dataset](https://charleshamesse.github.io/bunker-dvi-dataset)) and convert with [tool](https://github.com/MapsHD/mandeye_to_bag). Data conversion is performed using the mandeye_to_bag tool, with the workflow: 
-“ros1-to-hdmapping → hdmapping-to-ros1(name it reg-1-convert.bag) → Step 3(convert data to ros2)
+ros1-to-hdmapping → hdmapping-to-ros1(name it reg-1-convert.bag) → Step 3(convert data to ros2)
 
 File 'reg-1-ros2-lidar. is an input for further calculations.
 It should be located in '~/hdmapping-benchmark/data'.
