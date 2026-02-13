@@ -32,7 +32,7 @@ We now convert data from ROS1 to ROS2
 ```shell
 docker run -it -v ~/hdmapping-benchmark/data/reg-1-convert.bag:/data --user 1000:1000 resple_humble /bin/bash
 cd /data
-rosbags-convert --src reg-1-convert.bag --dst reg-1-ros2-lidar
+rosbags-convert --src reg-1-convert --dst reg-1-ros2-lidar
 ```
 
 close terminal
