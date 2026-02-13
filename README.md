@@ -8,9 +8,6 @@ ros1-to-hdmapping → hdmapping-to-ros1(name it reg-1-convert.bag) → rosbags-c
  ```shell
 ./mandeye-convert.sh '~/hdmapping-benchmark/data/reg-1.bag' '~/hdmapping-benchmark/data/reg-1-convert' ros1-to-hdmapping
 ./mandeye-convert.sh '~/hdmapping-benchmark/data/reg-1-convert' '~/hdmapping-benchmark/data/reg-1-convert.bag' hdmapping-to-ros1
-docker run -it -v ~/hdmapping-benchmark/data/reg-1-convert.bag:/data --user 1000:1000 resple_humble /bin/bash
-cd /data/
-rosbags-convert --src reg-1-convert --dst reg-1-ros2-lidar
 ```
 
 
@@ -29,9 +26,18 @@ git checkout Bunker-DVI-Dataset-reg-1
 docker build -t resple_humble .
 ```
 
+## Step 3 (Convert data)
+We now convert data from ROS1 to ROS2
+
+```shell
+docker run -it -v ~/hdmapping-benchmark/data/reg-1-convert.bag:/data --user 1000:1000 resple_humble /bin/bash
+cd /data
+rosbags-convert --src reg-1-convert.bag --dst reg-1-ros2-lidar
+```
+
 close terminal
 
-## Step 3 (run docker, file 'reg-1-ros2-lidar' should be in '~/hdmapping-benchmark/data')
+## Step 4 (run docker, file 'reg-1-ros2-lidar' should be in '~/hdmapping-benchmark/data')
 open new terminal
 
 ```shell
@@ -41,7 +47,7 @@ cd ~/hdmapping-benchmark/data
 ~/hdmapping-benchmark/benchmark-RESPLE-to-HDMapping/docker_session_run-ros2-resple.sh reg-1-ros2-lidar .
 ```
 
-## Step 4 (Open and visualize data)
+## Step 5 (Open and visualize data)
 Expected data should appear in ~/hdmapping-benchmark/data/output_hdmapping-resple
 Use tool [multi_view_tls_registration_step_2](https://github.com/MapsHD/HDMapping) to open session.json from ~/hdmapping-benchmark/data/output_hdmapping-resple.
 
